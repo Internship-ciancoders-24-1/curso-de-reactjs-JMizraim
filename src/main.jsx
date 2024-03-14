@@ -1,22 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+// import NewBadge from "./pages/NewBadge";
+import Badges from "./pages/Badges";
 
-const jsx = (
-  <div>
-    <h1>Soy Mizraim</h1>
-    <p>Estoy aprendiendo React</p>
-  </div>
+import "bootstrap/dist/css/bootstrap.css";
+import "./global.css";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <Badges />
+  </React.StrictMode>
 );
-
-const element = React.createElement(
-  "div",
-  {},
-  React.createElement("h1", {}, "Soy Mizraim"),
-  React.createElement("p", {}, "Estoy aprendiendo React")
-);
-
-const container = document.getElementById("root");
-
-const root = ReactDOM.createRoot(container);
-
-root.render(element);
