@@ -1,6 +1,8 @@
 import React from "react";
 
-import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
+
+
 import BadgesList from "../components/BadgesList";
 
 import styles from "./styles/Badges.module.css";
@@ -502,7 +504,6 @@ const badges = [
 const Badges = () => {
   return (
     <>
-      <Navbar />
       <div className={styles.Badges}>
         <div className={styles.Badges__hero}>
           <div className={styles.Badges__container}>
@@ -516,9 +517,9 @@ const Badges = () => {
       </div>
       <div className={styles.Badges__container}>
         <div className={styles.Badges__buttons}>
-          <a href="/badges/new" className="btn btn-primary">
+          <Link to="/badges/new" className="btn btn-primary">
             New Badge
-          </a>
+          </Link>
         </div>
         <BadgesList badges={badges} /> 
       </div>

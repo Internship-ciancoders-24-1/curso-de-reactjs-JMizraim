@@ -1,6 +1,5 @@
 import React, { useState} from "react";
 
-import Navbar from "../components/Navbar";
 import Badge from "../components/Badge";
 import BadgeForm from "../components/BadgeForm";
 
@@ -26,7 +25,6 @@ const NewBadge = () => {
 
   return (
     <>
-      <Navbar />
       <div className={styles.NewBadge__hero}>
         <img className="img-fluid" src={header} alt="Logo" />
       </div>
