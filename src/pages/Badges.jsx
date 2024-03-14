@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -8,7 +8,7 @@ import BadgesList from "../components/BadgesList";
 import styles from "./styles/Badges.module.css";
 import confLogo from "../assets/badge-header.svg";
 
-const badges = [
+const data = [
   {
     id: "2de30c42-9deb-40fc-a41f-05e62b5939a7",
     firstName: "Freda",
@@ -502,6 +502,29 @@ const badges = [
 ];
 
 const Badges = () => {
+
+  const [badges, setBadges] = useState([]);
+
+  // componentDidMount
+  useEffect(() => {
+
+    console.log("componentDidMount");
+    const t = setTimeout(() => {
+      setBadges(data);
+    }, 3000);
+
+    //componentWillUnmount
+    return () => {
+      console.log("componentWillUnmount");
+      clearTimeout(t);
+    };
+  }, []);
+
+  // componentDidUpdate
+  useEffect(() => {
+    console.log("componentDidUpdate");
+  }, [badges]);
+
   return (
     <>
       <div className={styles.Badges}>
