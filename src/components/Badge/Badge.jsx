@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./Badge.module.css";
 import badge from "../../assets/badge-header.svg";
-import avatar from "../../assets/avatar.svg";
+
+import Grabatar from "../Grabatar";
 
 const Badge = ({
   firstName,
@@ -16,7 +17,7 @@ const Badge = ({
         <img src={badge} alt="badge" />
       </div>
       <div className={styles["Badge__section-name"]}>
-        <img src={avatar} alt="avatar" style={{ width: 100 }} />
+        <Grabatar email={email} alt="avatar" className={styles.Badge__avatar}/>
         <h1>
           {firstName} <br />
           {lastName}

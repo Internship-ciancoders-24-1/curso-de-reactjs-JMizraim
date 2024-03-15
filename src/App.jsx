@@ -1,22 +1,29 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Layout from "./components/Layout";
-import Badges from "./pages/Badges";
-import NewBadge from "./pages/NewBadge";
+import MainLayout from "./layouts/MainLayout";
+
+// pages
+import BadgesPage from "./pages/BadgesPage";
+import NewBadgePage from "./pages/NewBadgePage";
+import EditBadgePage from "./pages/EditBadgePage";
+import HomePage from "./pages/HomePage";
 
 const router = createBrowserRouter([
-  { path: "/badges", element: <Badges /> },
-  { path: "/badges/new", element: <NewBadge /> },
-    { path: "*", element: <h1>Not Found</h1> },
+  {
+    path: "/",
+    element: <MainLayout />,
+    children: [
+      { path: "/", element: <HomePage /> },
+      { path: "badges", element: <BadgesPage /> },
+      { path: "badges/new", element: <NewBadgePage /> },
+      { path: "badges/:badgeId/edit", element: <EditBadgePage /> },
+    ],
+  },
 ]);
 
 const App = () => {
-  return (
-    <Layout>
-      <RouterProvider router={router} />
-    </Layout>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;

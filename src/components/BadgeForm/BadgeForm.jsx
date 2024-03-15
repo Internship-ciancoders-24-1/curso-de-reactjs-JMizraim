@@ -1,20 +1,9 @@
 import React from "react";
 
-const BadgeForm = ({formValues, onChange}) => {
-
-
-  const handleClick = (e) => {};
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(JSON.stringify(formValues));
-  };
-
+const BadgeForm = ({formValues, onChange, onSubmit}) => {
   return (
     <div>
-      <h1>New Attendant</h1>
-
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={onSubmit}>
         <div className="form-group">
           <label>First Name</label>
           <input
@@ -70,7 +59,7 @@ const BadgeForm = ({formValues, onChange}) => {
           />
         </div>
 
-        <button onClick={handleClick} className="mt-4 btn btn-primary">
+        <button type="submit" className="mt-4 btn btn-primary">
           Save
         </button>
       </form>

@@ -1,15 +1,21 @@
 import React from "react";
 
 import styles from "./BadgesList.module.css";
+import { Link } from "react-router-dom";
 
-const BadgesList = ({badges}) => {
+const BadgesList = ({ badges }) => {
   return (
     <div className={styles.BadgesList}>
       <ul className="list-unstyled">
         {badges.map((badge) => {
           return (
             <li key={badge.id}>
-              <BadgesListItem badge={badge} />
+              <Link
+                className="text-reset text-decoration-none"
+                to={`/badges/${badge.id}/edit`}
+              >
+                <BadgesListItem badge={badge} />
+              </Link>
             </li>
           );
         })}
@@ -18,7 +24,7 @@ const BadgesList = ({badges}) => {
   );
 };
 
-const BadgesListItem = ({badge}) => {
+const BadgesListItem = ({ badge }) => {
   return (
     <div className={styles.BadgesListItem}>
       <img
