@@ -6,7 +6,8 @@ import MainLayout from "./layouts/MainLayout";
 // pages
 import BadgesPage from "./pages/BadgesPage";
 import NewBadgePage from "./pages/NewBadgePage";
-import EditBadgePage from "./pages/EditBadgePage";
+import BadgeEditPage from "./pages/BadgeEditPage";
+import BadgeDetailsPage from "./pages/BadgeDetailsPage";
 import HomePage from "./pages/HomePage";
 
 const router = createBrowserRouter([
@@ -17,7 +18,9 @@ const router = createBrowserRouter([
       { path: "/", element: <HomePage /> },
       { path: "badges", element: <BadgesPage /> },
       { path: "badges/new", element: <NewBadgePage /> },
-      { path: "badges/:badgeId/edit", element: <EditBadgePage /> },
+      { path: "badges/:badgeId/edit", element: <BadgeEditPage /> },
+      { path: "badges/:badgeId/details", element: <BadgeDetailsPage /> },
+
     ],
   },
 ]);

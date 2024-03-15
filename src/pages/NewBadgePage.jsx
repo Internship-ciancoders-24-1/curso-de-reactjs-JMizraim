@@ -51,11 +51,12 @@ const NewBadgePage = () => {
       .then((response) => response.json())
       .then((data) => {
         navigate("/badges");
-        setLoading(false);
       })
       .catch((error) => {
-        setLoading(false);
         setError(error);
+      }).finally(() => {
+        setLoading(false);
+        setError(null);
       });
   };
 

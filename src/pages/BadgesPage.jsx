@@ -1,39 +1,11 @@
-import React from "react";
-
 import { Link } from "react-router-dom";
 
-import useSWR from "swr";
-
 import BadgesList from "../components/BadgesList";
-
-import LoadingPage from "./LoadingPage";
-import ErrorPage from "./ErrorPage";
 
 import styles from "./styles/Badges.module.css";
 import confLogo from "../assets/badge-header.svg";
 
 const Badges = () => {
-  const {
-    data: badges,
-    isLoading,
-    error,
-  } = useSWR("http://localhost:3000/badges", (url) =>
-    fetch(url).then((response) => response.json()), {
-      refreshInterval: 1000,
-    }
-  );
-
-  if (isLoading) {
-    return <LoadingPage />;
-  }
-
-  if (error) {
-    return <ErrorPage messageError={error.message} />;
-  }
-
-  if (!badges || badges.length === 0) {
-    return <p>No hay badges</p>;
-  }
 
   return (
     <>
@@ -54,7 +26,7 @@ const Badges = () => {
             New Badge
           </Link>
         </div>
-        <BadgesList badges={badges} />
+        <BadgesList />
       </div>
     </>
   );

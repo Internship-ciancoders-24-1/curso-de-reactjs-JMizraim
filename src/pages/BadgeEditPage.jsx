@@ -15,7 +15,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import md5 from "md5";
 import ErrorPage from "./ErrorPage";
 
-const EditBadgePage = () => {
+const BadgeEditPage = () => {
   const navigate = useNavigate();
   const params = useParams();
 
@@ -70,11 +70,12 @@ const EditBadgePage = () => {
       .then((response) => response.json())
       .then((data) => {
         navigate("/badges");
-        setIsUpdating(false);
       })
       .catch((updateError) => {
-        setIsUpdating(false);
         setUpdateError(updateError);
+      }).finally(() => {
+        setIsUpdating(false);
+        setUpdateError(null);
       });
   };
 
@@ -120,4 +121,4 @@ const EditBadgePage = () => {
   );
 };
 
-export default EditBadgePage;
+export default BadgeEditPage;

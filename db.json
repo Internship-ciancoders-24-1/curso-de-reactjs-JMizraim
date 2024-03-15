@@ -1,15 +1,6 @@
 {
   "badges": [
     {
-      "firstName": "Freda",
-      "lastName": "Grady",
-      "email": "Leann_Berge@gmail.com",
-      "jobTitle": "Legacy Brand Director",
-      "twitter": "FredaGrady22221-7573",
-      "avatarUrl": "https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b?d=identicon",
-      "id": "2de30c42-9deb-40fc-a41f-05e62b5939a7"
-    },
-    {
       "id": "d00d3614-101a-44ca-b6c2-0be075aeed3d",
       "firstName": "Major",
       "lastName": "Rodriguez",
@@ -172,24 +163,6 @@
       "avatarUrl": "https://www.gravatar.com/avatar/0b7dc92c5cbcc2159b5ed9cb5d074867?d=identicon"
     },
     {
-      "firstName": "Mizraim",
-      "lastName": "Medina",
-      "email": "jomizraim@gmail.com",
-      "jobTitle": "Front-end",
-      "twitter": "jmizraim",
-      "avatarUrl": "https://www.gravatar.com/avatar/52493fb2aeb6e21456be21329592694c?d=identicon",
-      "id": "59c5"
-    },
-    {
-      "firstName": "Alguien",
-      "lastName": "Alguien",
-      "email": "alguien@example.com",
-      "jobTitle": "Trabajo en algo",
-      "twitter": "alguien",
-      "avatarUrl": "https://www.gravatar.com/avatar/8b4b0cfccdcf9f9bfcda8efa0bcdaaa5?d=identicon",
-      "id": "caa8"
-    },
-    {
       "firstName": "Arturo",
       "lastName": "Vidal",
       "email": "example@gmail.com",
@@ -197,6 +170,15 @@
       "twitter": "arturo123",
       "avatarUrl": "https://www.gravatar.com/avatar/e820bb4aba5ad74c5a6ff1aca16641f6?d=identicon",
       "id": "7567"
+    },
+    {
+      "firstName": "José",
+      "lastName": "Medina",
+      "email": "jomizraim47@gmail.com",
+      "jobTitle": "Front",
+      "twitter": "jmizraim",
+      "avatarUrl": "https://www.gravatar.com/avatar/1e079a0e37676850d1aac64001c83f4c?d=identicon",
+      "id": "e0e4"
     }
   ]
 }
